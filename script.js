@@ -10,7 +10,7 @@ const tools = [
     bestFor: "Draft konten, belajar konsep sulit, membuat strategi, dan mempercepat blank page.",
     pro: "Fleksibel untuk hampir semua workflow dan mudah dijadikan pusat kerja harian.",
     con: "Jawaban tetap perlu dicek, terutama untuk data, sumber, dan klaim terbaru.",
-    link: affiliateBase + "chatgpt"
+    link: "https://chatgpt.com/"
   },
   {
     name: "Perplexity",
@@ -21,7 +21,7 @@ const tools = [
     bestFor: "Riset artikel, validasi topik, mencari angle konten, dan memahami pasar.",
     pro: "Lebih enak untuk riset cepat karena sumbernya langsung terlihat.",
     con: "Tetap perlu membaca sumber asli untuk keputusan penting.",
-    link: affiliateBase + "perplexity"
+    link: "https://www.perplexity.ai/"
   },
   {
     name: "Canva",
@@ -32,8 +32,19 @@ const tools = [
     bestFor: "Membuat aset visual cepat tanpa harus jadi desainer profesional.",
     pro: "Template banyak, workflow cepat, dan cocok untuk produksi konten harian.",
     con: "Output bisa terlihat generik kalau tidak punya sistem visual sendiri.",
-    link: affiliateBase + "canva"
+    link: "https://www.canva.com/"
   },
+  {
+  name: "Pictory",
+  initials: "PI",
+  color: "logo-purple",
+  categories: ["creator", "produktif"],
+  what: "AI video generator untuk mengubah script, artikel, atau konten panjang menjadi video siap publish.",
+  bestFor: "Membuat video faceless, repurposing blog ke video, dan produksi konten cepat tanpa editing rumit.",
+  pro: "Otomatis memilih visual, menambahkan subtitle, voiceover, dan mempercepat workflow video.",
+  con: "Kustomisasi editing tidak sedalam software editing profesional.",
+  link: "https://pictory.ai?fpr=unlockai55"
+}
   {
     name: "Notion AI",
     initials: "NA",
@@ -43,7 +54,7 @@ const tools = [
     bestFor: "Mengubah catatan acak menjadi sistem kerja, dokumentasi, dan rencana konten.",
     pro: "Kuat untuk orang yang ingin membangun second brain dan operating system.",
     con: "Nilainya terasa maksimal kalau kamu sudah disiplin memakai Notion.",
-    link: affiliateBase + "notion-ai"
+    link: "https://www.notion.com/"
   },
   {
     name: "Claude",
@@ -54,7 +65,7 @@ const tools = [
     bestFor: "Brief, script edukasi, audit copy, SOP, dan dokumen bisnis.",
     pro: "Bagus untuk output yang butuh konteks panjang dan nada yang rapi.",
     con: "Integrasi tool harian bisa lebih terbatas dibanding beberapa alternatif.",
-    link: affiliateBase + "claude"
+    link: "https://claude.ai/login"
   },
   {
     name: "Gamma",
@@ -65,7 +76,7 @@ const tools = [
     bestFor: "Presentasi kuliah, pitch deck sederhana, dan kelas online.",
     pro: "Sangat cepat untuk mengubah ide menjadi struktur presentasi.",
     con: "Desain akhir tetap perlu dipoles agar tidak terasa template.",
-    link: affiliateBase + "gamma"
+    link: "https://gamma.app/id"
   },
   {
     name: "CapCut",
@@ -76,8 +87,19 @@ const tools = [
     bestFor: "TikTok, Reels, Shorts, tutorial pendek, dan konten edukasi.",
     pro: "Produksi video cepat tanpa workflow editing yang berat.",
     con: "Kontrol brand dan motion yang kompleks tetap terbatas.",
-    link: affiliateBase + "capcut"
+    link: "https://www.capcut.com/id-id/tools/desktop-video-editor?utm_medium=sem&utm_source=googleadwords_int&utm_campaign=brand&pid=359289&af_c_id=22906197970&adset_id=184419265416&ad_id=769613073354&placement=&keyword=capcut&targetid=aud-2085368859519:kwd-1406970026529&matchtype=e&gad_source=1&gad_campaignid=22906197970&gbraid=0AAAAACROvhlSaHiTBuzomgAlGXCpAGy-w&gclid=Cj0KCQjwlqTRBhCBARIsANrkrxgeQuxZ89qlqj7Ue24ftzEQC3yo7kfNwMvrdh41fqVsS-3esFvHTxIaAgdcEALw_wcB"
   },
+  {
+  name: "Writesonic",
+  initials: "WS",
+  color: "logo-orange",
+  categories: ["bisnis", "creator", "produktif"],
+  what: "AI writing assistant untuk membuat artikel, copy iklan, email marketing, dan konten SEO.",
+  bestFor: "Menulis konten pemasaran, blog, landing page, dan ide konten dengan cepat.",
+  pro: "Banyak template siap pakai dan terintegrasi dengan workflow content marketing.",
+  con: "Output sering tetap membutuhkan editing agar sesuai dengan brand voice.",
+  link: "https://writesonic.com/"
+}
   {
     name: "ElevenLabs",
     initials: "EL",
@@ -87,7 +109,7 @@ const tools = [
     bestFor: "Video edukasi, narasi produk, dan konten tanpa rekaman suara manual.",
     pro: "Kualitas suara tinggi dan bisa mempercepat produksi audio.",
     con: "Pronunciation dan etika penggunaan suara tetap harus dijaga.",
-    link: affiliateBase + "elevenlabs"
+    link: "https://elevenlabs.io/"
   },
   {
     name: "Zapier",
@@ -98,7 +120,7 @@ const tools = [
     bestFor: "Lead capture, follow-up, content ops, dan workflow berulang.",
     pro: "Cepat membangun automation tanpa perlu banyak coding.",
     con: "Biaya bisa naik saat task dan integrasi makin banyak.",
-    link: affiliateBase + "zapier"
+    link: "https://zapier.com/"
   },
   {
     name: "Google Gemini",
@@ -109,7 +131,7 @@ const tools = [
     bestFor: "Workflow yang banyak memakai Google Docs, Sheets, dan Drive.",
     pro: "Nyaman untuk pengguna yang sudah hidup di ekosistem Google.",
     con: "Hasil terbaik tergantung konteks dan akses integrasi yang kamu pakai.",
-    link: affiliateBase + "gemini"
+    link: "https://gemini.google.com/"
   },
   {
     name: "Tally",
@@ -120,7 +142,7 @@ const tools = [
     bestFor: "Mengumpulkan email dan segmentasi audience tanpa setup berat.",
     pro: "Cepat dibuat, tampil bersih, dan mudah disambungkan ke automation.",
     con: "Bukan tool AI utama, tapi penting untuk conversion layer.",
-    link: affiliateBase + "tally"
+    link: "https://tally.so/"
   },
   {
     name: "Midjourney",
@@ -131,7 +153,7 @@ const tools = [
     bestFor: "Thumbnail concept, visual direction, produk digital, dan ide campaign.",
     pro: "Kualitas visual kuat untuk eksplorasi kreatif yang cepat.",
     con: "Workflow dan kontrol revisi butuh latihan agar konsisten.",
-    link: affiliateBase + "midjourney"
+    link: "https://www.midjourney.com/explore?tab=top"
   }
 ];
 
