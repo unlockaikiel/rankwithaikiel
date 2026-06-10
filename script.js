@@ -44,7 +44,7 @@ const tools = [
   pro: "Otomatis memilih visual, menambahkan subtitle, voiceover, dan mempercepat workflow video.",
   con: "Kustomisasi editing tidak sedalam software editing profesional.",
   link: "https://pictory.ai?fpr=unlockai55"
-}
+},
   {
     name: "Notion AI",
     initials: "NA",
@@ -99,7 +99,7 @@ const tools = [
   pro: "Banyak template siap pakai dan terintegrasi dengan workflow content marketing.",
   con: "Output sering tetap membutuhkan editing agar sesuai dengan brand voice.",
   link: "https://writesonic.com/"
-}
+},
   {
     name: "ElevenLabs",
     initials: "EL",
@@ -368,32 +368,26 @@ const prompts = [
 const stackGroups = [
   {
     area: "Writing",
-    badge: "Copy",
     items: ["ChatGPT", "Claude", "Notion AI"]
   },
   {
     area: "Research",
-    badge: "Sources",
     items: ["Perplexity", "Google Gemini", "ChatGPT"]
   },
   {
     area: "Design",
-    badge: "Visual",
     items: ["Canva", "Midjourney", "Gamma"]
   },
   {
     area: "Video",
-    badge: "Shorts",
     items: ["CapCut", "ElevenLabs", "Canva"]
   },
   {
     area: "Automation",
-    badge: "Ops",
     items: ["Zapier", "Tally", "Notion AI"]
   },
   {
     area: "Conversion",
-    badge: "Asset",
     items: ["Tally", "Canva", "Perplexity"]
   }
 ];
@@ -557,7 +551,6 @@ function renderStack() {
     <section class="stack-group">
       <h3>
         ${escapeHtml(group.area)}
-        <span class="stack-badge">${escapeHtml(group.badge)}</span>
       </h3>
       <ul>
         ${group.items.map((name) => {
@@ -573,47 +566,6 @@ function renderStack() {
       </ul>
     </section>
   `).join("");
-}
-
-function renderQuizOptions() {
-  const options = byId("quizOptions");
-
-  options.innerHTML = quizPersonas.map((persona) => `
-    <button type="button" class="${persona.id === state.persona ? "active" : ""}" data-persona="${escapeHtml(persona.id)}">
-      ${escapeHtml(persona.label)}
-    </button>
-  `).join("");
-
-  options.querySelectorAll("button").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.persona = button.dataset.persona;
-      renderQuizOptions();
-      renderQuizResult();
-    });
-  });
-}
-
-function renderQuizResult() {
-  const result = byId("quizResult");
-  const persona = quizPersonas.find((item) => item.id === state.persona) || quizPersonas[0];
-
-  result.innerHTML = `
-    <h3>${escapeHtml(persona.title)}</h3>
-    <ul class="result-list">
-      ${persona.recommendations.map((name) => {
-        const tool = toolByName(name);
-        return `
-          <li>
-            <div>
-              <strong>${escapeHtml(name)}</strong>
-              <span>${escapeHtml(tool ? tool.bestFor : "Rekomendasi AI pilihan unlockai.kiel.")}</span>
-            </div>
-            <a href="${escapeHtml(tool ? tool.link : "#")}" target="_blank" rel="noopener">Cek</a>
-          </li>
-        `;
-      }).join("")}
-    </ul>
-  `;
 }
 
 async function copyText(text) {
@@ -647,24 +599,6 @@ function showToast(message) {
   }, 2400);
 }
 
-function handleSignup(event) {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const email = new FormData(form).get("email");
-  const source = form.dataset.source || "site";
-  const subscribers = JSON.parse(localStorage.getItem("rankwithaikiel_subscribers") || "[]");
-
-  subscribers.push({
-    email,
-    source,
-    createdAt: new Date().toISOString()
-  });
-
-  localStorage.setItem("rankwithaikiel_subscribers", JSON.stringify(subscribers));
-  form.reset();
-  showToast("Kamu masuk list unlockai.kiel.");
-}
-
 function bindCategories() {
   document.querySelectorAll("[data-category]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -684,23 +618,14 @@ function bindSearch() {
   });
 }
 
-function bindSignupForms() {
-  document.querySelectorAll(".signup-form").forEach((form) => {
-    form.addEventListener("submit", handleSignup);
-  });
-}
-
 function init() {
   bindCategories();
   bindSearch();
-  bindSignupForms();
   renderTools();
   renderWorkflows();
   renderPromptTabs();
   renderPrompts();
   renderStack();
-  renderQuizOptions();
-  renderQuizResult();
 }
 
 document.addEventListener("DOMContentLoaded", init);
